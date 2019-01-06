@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game : TicTacToe</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div>
+    <div class="header">TicTacToe</div>
+    <div class="player_Details">
+      Moves Counter <input id="counter" type='number' value=0 style="width:40px; text-align: center"><br><br>
+      Player1 : <input type="text" id="player1"> <input type="submit" onclick="getPlayer1()"><br>
+      Player2 : <input type="text" id="player2"> <input type="submit" onclick="getPlayer2()">
+    </div>
+    <div class="board">
+      <input id="1" class="playButton" onclick="updateBoard('1')">
+      <input id="2" class="playButton" onclick="updateBoard('2')">
+      <input id="3" class="playButton" onclick="updateBoard('3')"><br>
+      <input id="4" class="playButton" onclick="updateBoard('4')">
+      <input id="5" class="playButton" onclick="updateBoard('5')">
+      <input id="6" class="playButton" onclick="updateBoard('6')"><br>
+      <input id="7" class="playButton" onclick="updateBoard('7')">
+      <input id="8" class="playButton" onclick="updateBoard('8')">
+      <input id="9" class="playButton" onclick="updateBoard('9')">
+    </div>
+  </div>
+</body>
+
+</html>
