@@ -25,7 +25,7 @@ const declareWinner = function (choice) {
   };
 
   if (isSubset(wininigConditions, moves)) {
-    alert('' + player + 'has won the match');
+    alert('' + player + ' has won the match');
     process.exit();
   }
 }
@@ -43,14 +43,18 @@ const moveToggler = function (id) {
 
 const getPlayer1 = function () {
   player1 = document.getElementById('player1').value;
+  document.getElementById('player1').setAttribute('disabled', 'disabled')
 }
 
 const getPlayer2 = function () {
   player2 = document.getElementById('player2').value;
+  document.getElementById('player2').setAttribute('disabled', 'disabled')
+
 }
 
 const updateBoard = function (id) {
   let choice = moveToggler(id);
   document.getElementById(id).value = choice;
+  document.getElementById(id).setAttribute('disabled', 'disabled')  
   declareWinner(choice);
 }
