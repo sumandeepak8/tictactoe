@@ -12,21 +12,21 @@ const isSubset = function (wininigConditions, moves) {
   });
 };
 
-const declareWinner = function (choice) {
+const declareWinner = function (symbol) {
   let moves = [];
   let player;
-  if (choice == 'x') {
+  if (symbol == 'x') {
     moves = player1Moves;
     player = player1
   };
-  if (choice == 'o') {
+  if (symbol == 'o') {
     moves = player2Moves;
     player = player2;
   };
 
   if (isSubset(wininigConditions, moves)) {
-    alert('' + player + ' has won the match');
-    process.exit();
+    document.getElementById('winner').innerHTML = player + '  has won the match';
+    window.stop();
   }
 }
 
@@ -43,18 +43,20 @@ const moveToggler = function (id) {
 
 const getPlayer1 = function () {
   player1 = document.getElementById('player1').value;
-  document.getElementById('player1').setAttribute('disabled', 'disabled')
+  document.getElementById('x').innerHTML = "your symbol is 'x' ";
+  document.getElementById('player1').setAttribute('disabled', 'disabled');
 }
 
 const getPlayer2 = function () {
   player2 = document.getElementById('player2').value;
-  document.getElementById('player2').setAttribute('disabled', 'disabled')
+  document.getElementById('o').innerHTML = "your symbol is 'o' ";
+  document.getElementById('player2').setAttribute('disabled', 'disabled');
 
 }
 
 const updateBoard = function (id) {
-  let choice = moveToggler(id);
-  document.getElementById(id).value = choice;
-  document.getElementById(id).setAttribute('disabled', 'disabled')  
-  declareWinner(choice);
+  let symbol = moveToggler(id);
+  document.getElementById(id).value = symbol;
+  document.getElementById(id).setAttribute('disabled', 'disabled');
+  declareWinner(symbol);
 }
