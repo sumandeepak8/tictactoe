@@ -6,9 +6,12 @@ background-color: gainsboro;
   padding: 20px;
 }
 
+input{
+  font-size: 20px;
+}
 .playButton{
 text-align: center;
-  font-size: 25px;
+  font-size: 35px;
   width: 100px;
  height: 100px;
  background-color: aliceblue;
@@ -19,10 +22,12 @@ text-align: center;
   padding: 10px;
   font-size: 80px;
   height: 100px;
+  border-bottom: 2px solid black;
   background-color:grey;
 }
 
 .player_Details{
+text-align: center;
 padding: 20px;
 width: 600px;
 height: 350px;
@@ -31,10 +36,33 @@ margin-top: 20px;
 background-color: lightgrey;
 }
 
-.board{
+#board{
   margin-top: 20px;
   float: right;
   width: 335px;
   padding: 10px;
   background-color: yellow;
+  visibility: hidden;
+}
+
+.start_button{
+  font-size: 20px;
+  width: 100px;
+  height: 30px; 
+  text-align: center;
+  border-radius: 30px;
+  background-color : skyblue;
+}
+
+#turn{
+  color: black;
+ text-align: center;
+  height: 40px;
+  padding: 10px;
+  margin-left: 115px;
+  width : 350px;
+}
+
+.playButton:hover{
+  cursor : pointer;
 }

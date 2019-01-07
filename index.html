@@ -7,18 +7,21 @@
   <script src="main.js"></script>
 </head>
 
-<body>
+<body onLoad="document.getElementById('player1').focus()">
   <div>
     <div class="header">TicTacToe</div>
     <div class="player_Details">
-      Enter the name of player1 : <input type="text" id="player1"> <input type="submit" onclick="getPlayer1()"><br>
-      <p id="x"></p>
-      Enter the name of player2 : <input type="text" id="player2"> <input type="submit" onclick="getPlayer2()"><br>
-      <p id="o"></p>
-      Moves Counter <input id="counter" type='number' readonly style="width:40px; text-align: center"><br>
+      Enter the name of player1 : <input type="text" id="player1" onkeydown="setFocus()"><br><br>
+      Enter the name of player2 : <input type="text" id="player2" onkeydown="setFocus();"><br><br>
+      <button class="start_button" onclick="showBoard()">start</button>
+      <p id="X"></p>
+      <p id="0"></p>
       <p id="winner"></p>
+      <!-- <input id="turn" readonly>
+  -->
+      <div id="turn" style="background-color: lightgrey"></div>
     </div>
-    <div class="board">
+    <div id="board">
       <input id="1" class="playButton" onclick="updateBoard('1')">
       <input id="2" class="playButton" onclick="updateBoard('2')">
       <input id="3" class="playButton" onclick="updateBoard('3')"><br>
